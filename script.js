@@ -5,6 +5,7 @@ const whoTurn = document.querySelector('.who-turn')
 whoTurn.textContent = `${currentPlayer} turn to play!`
 
 document.querySelectorAll('.box').forEach(box => box.addEventListener('click', handleBoxClick));
+document.querySelector('.restart-game').addEventListener('click',restartGame);
 
 function handleBoxClick(click) {
     const clickedBox = click.target;
@@ -72,4 +73,12 @@ function winnerCheck() {
             playerChange();
         }
     }
+}
+
+function restartGame() {
+    gameActive = true;
+    currentPlayer = "X";
+    gameState = ["", "", "", "", "", "", "", "", ""];
+    whoTurn.textContent=`${currentPlayer} turn to play!`;
+    document.querySelectorAll('.box').forEach(box=>box.textContent="");
 }
