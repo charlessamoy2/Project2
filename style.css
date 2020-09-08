@@ -25,3 +25,7 @@ body {
     line-height: 100px;
     font-size: 60px;
 }
+
+.box:hover{
+    background-color:rgba(223, 223, 223, 0.3);
+}
