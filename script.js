@@ -15,4 +15,13 @@ function handleBoxClick(click) {
 
     gameState[boxIndex] = currentPlayer;
     clickedBox.textContent = currentPlayer;
+    playerChange();
+}
+
+function playerChange() {
+    if(currentPlayer === "X"){
+        currentPlayer = "O";
+    } else {
+        currentPlayer = "X";
+    }
 }
